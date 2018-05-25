@@ -11,16 +11,16 @@ class MulLayer:
         self.x = None
         self.y = None
         
-def forward(self, x, y):
-    self.x = x
-    self.y = y
-    out = x * y
+    def forward(self, x, y):
+        self.x = x
+        self.y = y
+        out = x * y
     
-    return out
+        return out
 
-#xとyをひっくり返す
-def backward(self, dout):
-    dx = dout * self.y
-    dy = dout * self.x
+    #xとyをひっくり返す
+    def backward(self, dout):
+        dx = dout * self.y
+        dy = dout * self.x
     
-    return dx, dy
+        return dx, dy
